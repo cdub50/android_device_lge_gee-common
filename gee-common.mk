@@ -28,6 +28,10 @@ DEVICE_PACKAGE_OVERLAYS := device/lge/gee-common/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+# Enable Torch
+PRODUCT_PACKAGES += \
+	Torch
+
 PRODUCT_PACKAGES := \
 	lights.msm8960
 
@@ -233,7 +237,6 @@ PRODUCT_PACKAGES += \
 	bdAddrLoader \
 	libwfcu \
 	conn_init \
-	OmniTorch
 
 PRODUCT_PACKAGES += \
 	keystore.msm8960
@@ -267,6 +270,9 @@ PRODUCT_RUNTIMES := \
 
 PRODUCT_RUNTIMES += \
 	runtime_libart
+
+# This is the mako-specific audio package
+$(call inherit-product, frameworks/base/data/sounds/AllAudio.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
