@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+LINARO_GCC_VERSION := 4.8
 
 TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
@@ -84,7 +85,7 @@ TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 TARGET_USES_C2D_COMPOSITON := true
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
-TARGET_QCOM_DISPLAY_VARIANT := caf
+#TARGET_QCOM_DISPLAY_VARIANT := caf
 
 BOARD_USES_QCOM_HARDWARE := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
